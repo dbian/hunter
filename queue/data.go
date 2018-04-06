@@ -1,9 +1,9 @@
 package queue
 
-type data struct {
-	title string
-	url   string
-	intro string
-	mag   string
-	score string
+type Data struct {
+	Title string
+	Url   string
+	Intro string
+	Mag   string
+	Score string
 }

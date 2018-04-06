@@ -6,32 +6,32 @@ import (
 
 func Test_lq_Insert(t *testing.T) {
 	q := NewLimitQueue()
-	q.Push(data{title: "a"})
-	q.Push(data{title: "b"})
-	q.Push(data{title: "c"})
+	q.Push(Data{Title: "a"})
+	q.Push(Data{Title: "b"})
+	q.Push(Data{Title: "c"})
 	d := q.(*lq)
 	if len(d.arr) != 3 {
 		t.Error("insert fail", d.arr)
 	}
 	MaxLen = 3
 
-	if !q.Push(data{title: "d"}) {
+	if !q.Push(Data{Title: "d"}) {
 		t.Error("push fail")
 	}
 	if len(d.arr) != 3 {
 		t.Error("insert fail", d.arr)
 	}
-	if q.Get(0).title != "b" {
+	if q.Get(0).Title != "b" {
 		t.Error("insert fail", d.arr)
 	}
-	if q.Get(1).title != "c" {
+	if q.Get(1).Title != "c" {
 		t.Error("insert fail", d.arr)
 	}
-	if q.Get(2).title != "d" {
+	if q.Get(2).Title != "d" {
 		t.Error("insert fail", d.arr)
 	}
 
-	if q.Push(data{title: "b"}) {
+	if q.Push(Data{Title: "b"}) {
 		t.Error("push should fail")
 	}
 }

@@ -1,6 +1,10 @@
 {
+  "qtorrent_username":"",
+  "qtorrent_password":"",
+  "qtorrent_url":"http://192.168.0.103:8080",
   "mail_username":"",
   "mail_password":"",
-  "qtorrent_username":"",
-  "qtorrent_password":""
+  "mail_from":"",
+  "mail_to":"",
+  "mail_fromport":587
 }

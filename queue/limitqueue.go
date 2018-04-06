@@ -2,12 +2,12 @@
 package queue
 
 type LQ interface {
-	Push(p data) bool
-	Get(i int) data
+	Push(p Data) bool
+	Get(i int) Data
 }
 
 type lq struct {
-	arr []data
+	arr []Data
 }
 
 func NewLimitQueue() LQ {
@@ -16,7 +16,7 @@ func NewLimitQueue() LQ {
 
 var MaxLen = 20
 
-func (l *lq) Push(p data) bool {
+func (l *lq) Push(p Data) bool {
 	for _, v := range l.arr {
 		if p == v {
 			return false
@@ -30,6 +30,6 @@ func (l *lq) Push(p data) bool {
 
 	return true
 }
-func (l *lq) Get(i int) data {
+func (l *lq) Get(i int) Data {
 	return l.arr[i]
 }

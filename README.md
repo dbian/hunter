@@ -7,6 +7,13 @@ movie hunter
 1. 新片通过邮件推送给用户。邮件里介绍新片的标题，评分，简介等信息，并提供可点击的连接。用户点击链接即可下发下载任务
 1. 移动端使用VLC播放树莓派通过samba共享的电影。
 
+
+## 配置文件
+1. 配置文件在根目录，config.json，顾名思义是json格式
+1. 下载需要使用qtorrent，将它的web ui功能打开，输入账号密码，并且填入本工程的config.json
+1. 填入邮箱的账号密码，用于自动发送邮件通知
+
+
 ## 关键实现
 1. 下载的功能使用qtorrent这个软件实现
 1. 远程下载使用的时qtorrent的[v3 http API](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-Documentation)实现，相当丰富
