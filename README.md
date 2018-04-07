@@ -10,21 +10,21 @@ movie hunter
 
 ## 配置文件
 1. 配置文件在根目录，config.json，顾名思义是json格式
-1. 下载需要使用qtorrent，将它的web ui功能打开，输入账号密码，并且填入本工程的config.json
-1. 填入邮箱的账号密码，用于自动发送邮件通知
+1. 下载需要使用qtorrent，将它的web ui功能打开，配置账号密码，并且填入本工程的config.json
+1. 填入邮箱的账号密码等信息，用于自动发送邮件通知
 
 
 ## 关键实现
 1. 下载的功能使用qtorrent这个软件实现
-1. 远程下载使用的时qtorrent的[v3 http API](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-Documentation)实现，相当丰富
+1. 远程下载使用的是qtorrent的[v3 http API](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-Documentation)实现，接口相当丰富
 1. 使用go语言及第三方辅助包开发
 
 ## 其他舒适建议（不然很蛋疼。。。）
 1. 使用树莓派，功耗低，可以全年运行。其他的低功耗服务器亦可。
-1. (大坑，慎入啊兄台)舍弃SD卡，因为长时间高负荷运行，寿命一般不超过3个月。
-建议按照[官网教程](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md)使用移动硬盘代替(需要外接个5w电源)
+1. 舍弃SD卡，因为长时间高负荷运行，寿命一般不超过3个月。
+建议按照[官网教程](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md)使用移动硬盘代替(大坑，慎入啊兄台)
 1. 开发一个服务端，搭建于私有VPS。实时监控树莓派的状态，列举可下载的电影列表，并提供触发下载的链接。（代码后续放出）
-1. 使用Supervisor来启动你的app。
+1. 使用Supervisor来启动app。
 1. 使用Samba来共享树莓派资源。IOS使用VLC这个APP来播放电影。
 
 ## TODO
